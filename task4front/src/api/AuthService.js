@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api"; // твой backend
+const API_URL = process.env.REACT_APP_API_URL; // твой backend
 
 export const register = async (email, password, name, company) => {
   const res = await fetch(`${API_URL}/register`, {

@@ -38,6 +38,10 @@ export default function AuthPage() {
     }
   };
 
+  const handleForgotPassword = () => {
+    toast.info("Just remember it bro");
+  };
+
   return (
     <div className="container-fluid vh-100 d-flex">
       <div className="row flex-grow-1 w-100">
@@ -74,6 +78,7 @@ export default function AuthPage() {
             <AuthToggle
               isLogin={isLogin}
               toggleMode={() => setIsLogin(!isLogin)}
+              handleForgotPassword={handleForgotPassword}
             />
           </div>
         </div>

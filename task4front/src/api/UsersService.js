@@ -1,6 +1,6 @@
 import { fetchWithAuth } from "./apiHelper";
 import { toast } from "react-toastify";
-const API_URL = "http://localhost:5000/api";
+const API_URL = process.env.REACT_APP_API_URL;
 
 export const getUsers = async () => {
   try {
@@ -11,7 +11,6 @@ export const getUsers = async () => {
     return await res.json();
   } catch (error) {
     toast.error(error.message);
-    throw error;
   }
 };
 
@@ -27,7 +26,6 @@ export const updateUserStatus = async (ids, status) => {
     toast.success(status === "blocked" ? "Blocked" : "Unblocked");
   } catch (error) {
     toast.error(error.message);
-    throw error;
   }
 };
 
@@ -43,6 +41,5 @@ export const deleteUsersByIds = async (ids) => {
     toast.success("Deleted");
   } catch (error) {
     toast.error(error.message);
-    throw error;
   }
 };

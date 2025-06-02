@@ -1,5 +1,3 @@
-import { use } from "react";
-
 export default function UserRow({ user, isSelected, onSelect }) {
   return (
     <tr className={user.status === "blocked" ? "text-muted" : ""}>

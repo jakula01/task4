@@ -1,6 +1,8 @@
-import React from "react";
-
-export default function AuthToggle({ isLogin, toggleMode }) {
+export default function AuthToggle({
+  isLogin,
+  toggleMode,
+  handleForgotPassword,
+}) {
   return (
     <div className="d-flex justify-content-between mt-4">
       <div>
@@ -10,9 +12,9 @@ export default function AuthToggle({ isLogin, toggleMode }) {
         </button>
       </div>
       <div>
-        <a href="#" className="btn btn-link p-0">
+        <button onClick={handleForgotPassword} className="btn btn-link p-0">
           Forgot password?
-        </a>
+        </button>
       </div>
     </div>
   );
