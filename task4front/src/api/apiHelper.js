@@ -15,7 +15,7 @@ export const fetchWithAuth = async (url, options = {}) => {
     if (res.status === 401 || res.status === 403) {
       localStorage.removeItem("token");
       setTimeout(() => {
-        window.location.href = "/auth";
+        window.location.assign("/auth");
       }, 2000);
       throw new Error(
         res.status === 401
