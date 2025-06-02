@@ -5,7 +5,7 @@ require("dotenv").config();
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://buildtask4.vercel.app",
   })
 );
 app.use(express.json());
