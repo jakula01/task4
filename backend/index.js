@@ -5,7 +5,7 @@ require("dotenv").config();
 const app = express();
 app.use(
   cors({
-    origin: "https://your-frontend.onrender.com",
+    origin: "https://task4-1-82sc.onrender.com",
   })
 );
 app.use(express.json());
